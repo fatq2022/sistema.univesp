@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="tests/phpunit/bootstrap.php"
+         colors="true"
+         cacheDirectory=".phpunit.cache">
+  <testsuites>
+    <testsuite name="backend">
+      <directory suffix="Test.php">tests/phpunit</directory>
+    </testsuite>
+  </testsuites>
+  <php>
+    <!-- Testes de recuperação de senha que usam MySQL (opcional). Exemplo no XAMPP:
+         TEST_DB_DSN="mysql:host=localhost;dbname=sistema;charset=utf8mb4"
+         Eles usam uma tabela TEMPORARY "usuario": não mexem nos dados reais. -->
+    <env name="TEST_DB_USER" value="root"/>
+    <env name="TEST_DB_PASS" value=""/>
+  </php>
+</phpunit>

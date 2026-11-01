@@ -1,0 +1,11 @@
+# Segredos e arquivos locais: nunca versionar
+config/config.json
+logs/
+*.log
+.DS_Store
+Thumbs.db
+node_modules/
+vendor/
+.phpunit.cache/
+cypress/videos/
+cypress/screenshots/

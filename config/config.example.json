@@ -1,0 +1,23 @@
+{
+  "app": {
+    "base_path": "/sistema",
+    "url_publica": "https://seu-dominio.com.br"
+  },
+  "database": {
+    "host": "localhost",
+    "dbname": "sistema",
+    "username": "root",
+    "password": ""
+  },
+  "email": {
+    "brevo_api_key": "",
+    "remetente_nome": "Controle de Laminação",
+    "remetente_email": "",
+    "registrar_link_no_log": false,
+    "modo_teste": false
+  },
+  "diagnostico": {
+    "url": "https://project--69891c11-e3be-56d4-8af2-a8b61ce0979e.lovable.app/api/public/diagnose",
+    "token": "COLE_AQUI_O_TOKEN"
+  }
+}

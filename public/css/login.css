@@ -1,0 +1,63 @@
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: #f3f6fb;
+}
+
+.login-container {
+    min-height: 100vh;
+}
+
+.left-side {
+    min-height: 100vh;
+    background-image: url("../images/loginBackground.png");
+    background-size: cover;
+    background-position: center;
+    background-color: #172033;
+}
+
+.right-side {
+    min-height: 100vh;
+    padding: 2rem;
+    background: #f8fafc;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    border: 0;
+    border-radius: 1rem;
+}
+
+.login-card h1 {
+    color: #334155;
+}
+
+@media (max-width: 767.98px) {
+    .right-side {
+        background-image:
+            linear-gradient(rgba(248, 250, 252, .92), rgba(248, 250, 252, .96)),
+            url("../images/loginBackground.png");
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
+/* Checklist de força da senha */
+.senha-regras { list-style: none; padding-left: 0; margin: .5rem 0 0; font-size: .9rem; }
+.senha-regra { color: #7f1d1d; }
+.senha-regra-ok { color: #14532d; font-weight: 600; }
+
+/* Contraste e foco nas telas de acesso */
+.text-muted, .form-text { color: #475569 !important; }
+.form-control::placeholder { color: #64748b; opacity: 1; }
+a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 3px solid #2563eb !important;
+    outline-offset: 2px !important;
+}

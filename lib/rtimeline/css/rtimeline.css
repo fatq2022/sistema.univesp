@@ -1,0 +1,76 @@
+/* Container da timeline */
+.timeline {
+  position: relative;
+}
+
+/* Estilo da row */
+.timeline .row {
+  padding: 15px 0;
+  align-items: center;
+  position: relative;
+}
+
+/* Circle wrapper */
+.timeline .circle {
+  padding-right: 0px !important;
+}
+
+/* Círculo central */
+.timeline .circle > div {
+  position: relative;
+  background-color: #ccc;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+/* Ícones */
+.timeline .col-auto > i {
+  color: #ccc;
+}
+
+/* Ajuste de espaçamento */
+.timeline .icon {
+  padding-left: 0px !important;
+}
+
+/* Linha vertical (mantendo sua lógica atual) */
+.timeline .circle > div::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  height: 500%;
+  width: 0.25px;
+  background-color: #ccc;
+}
+
+/* Card 
+.timeline .card {
+  width: 18rem;
+}*/
+
+.timeline .card-subtitle {
+  font-size: 0.8rem;
+  padding-top: 10px;
+}
+
+.timeline .card-body {
+  padding: 5px 15px 5px 20px !important;
+  position: relative;
+}
+
+/* Setinha do card */
+.timeline .card::after {
+  content: "";
+  position: absolute;
+  background-color: #f8f8f8;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: -6px;
+  transform: translateY(-50%) rotate(-45deg);
+  border-top: 1px #ccc solid;
+  border-left: 1px #ccc solid;
+}

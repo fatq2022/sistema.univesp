@@ -1,0 +1,16 @@
+RewriteEngine On
+RewriteBase /sistema/
+
+# --- SEGURANÇA: nunca servir código, configuração, logs ou SQL pelo navegador ---
+RewriteRule ^(config|controllers|models|helpers|routes|logs|tests|docs|migracoes|cypress|node_modules|vendor|\.phpunit\.cache)(/|$) - [F,L]
+RewriteRule ^(banco\.sql|seed_teste\.sql|TESTES\.md|composer\.(json|lock)|package(-lock)?\.json|phpunit\.xml|cypress\.config\.js)$ - [F,L]
+RewriteRule (^|/)\.(?!well-known) - [F,L]
+
+# Permitir acesso direto a qualquer ficheiro ou pasta dentro de views
+# (as views protegem-se sozinhas verificando a sessão)
+RewriteRule ^views/ - [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
